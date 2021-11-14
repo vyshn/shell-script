@@ -1,0 +1,45 @@
+                       PROGRAM--6
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ vi pooja.sh
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ cat pooja.sh
+#!/bin/bash
+if grep unix myfile
+then
+  :
+else
+  echo "sorry,unix was not found"
+fi
+
+OUTPUT:
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ ./pooja.sh
+grep: myfile: No such file or directory
+sorry,unix was not found
+
+                   PROGRAM-7
+
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ vi dad.sh
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ cat dad.sh
+#!/bin/bash
+count=0
+for i in *;do
+ if test -x $1;then
+    count='expr $count + 1'
+   fi
+  done
+  echo Total of $count files executable
+
+OUTPUT:
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ ./dad.sh
+Total of expr $count + 1 files executable
+
