@@ -1,0 +1,65 @@
+                    PROGRAM--8
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ vi mahi.sh
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ cat mahi.sh
+#!/bin/bash
+smallest=10000
+for i in 5 8 19 8 7 3;do
+ if test $i -lt $smallest;then
+      smallest=$i
+    fi
+   done
+   echo $smallest
+
+OUTPUT:
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ ./mahi.sh
+3 
+                     PROGRAM--9
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ vi manu.sh
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ cat manu.sh
+#!/bin/bash
+if test -z $REMOTEHOST
+then
+ :
+else
+  DISPLAY="$REMOTEHOST:0"
+  export DISPLAY
+fi
+
+OUTPUT:
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ ./manu.sh
+                   PROGRAM---10
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ vi pravi.sh
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ cat pravi.sh
+#!/bin/bash
+i=1
+ sum=0
+ while [ $i -le 100 ];do
+   sum='expr $sum + $i'
+   i='expr $i+ 1'
+  done
+  echo The sum is $sum
+
+OUTPUT:
+
+LENOVO@DESKTOP-P25PUTP MINGW64 ~/Desktop (master)
+$ ./pravi.sh
+./pravi.sh: line 4: [: too many arguments
+The sum is expr $sum + $i
+
+
+
+
